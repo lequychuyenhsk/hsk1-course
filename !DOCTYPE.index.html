@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện thi & Học HSK 1 (Bản 2.0 & 3.0)</title>
+    <style>
+        :root {
+            --primary-color: #c0392b;
+            --secondary-color: #2980b9;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #c0392b, #8e44ad);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 { margin: 0 0 10px 0; font-size: 28px; }
+        header p { margin: 0; font-size: 16px; opacity: 0.9; }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .tab-btn {
+            background-color: #e0e0e0;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(192, 57, 43, 0.3);
+        }
+        
+        .content-section {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .content-section.active {
+            display: block;
+        }
+        
+        h2 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h3 { color: var(--secondary-color); }
+        
+        ul { line-height: 1.8; }
+        li strong { color: #2c3e50; }
+        
+        .info-box {
+            background: #eaf2f8;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hệ Thống Học & Luyện Thi HSK 1</h1>
+        <p>So sánh chi tiết chuẩn HSK 2.0 và HSK 3.0 dành cho học sinh</p>
+    </header>
+
+    <div class="container">
+        <!-- Nút chuyển đổi giữa HSK 2.0 và 3.0 -->
+        <div class="tab-menu">
+            <button class="tab-btn active" onclick="switchTab('hsk2')">HSK 1 (Phiên bản 2.0)</button>
+            <button class="tab-btn" onclick="switchTab('hsk3')">HSK 1 (Phiên bản mới 3.0)</button>
+        </div>
+
+        <!-- Nội dung HSK 1 - 2.0 -->
+        <div id="hsk2" class="content-section active">
+            <h2>Chương trình HSK 1 - Phiên bản 2.0 (Truyền thống)</h2>
+            <p>Đây là cấu trúc đề thi và từ vựng quen thuộc được áp dụng nhiều năm qua, rất phù hợp cho người mới bắt đầu làm quen nhẹ nhàng với tiếng Trung.</p>
+            
+            <div class="info-box">
+                <strong>Tổng quan cấu trúc:</strong>
+                <ul>
+                    <li><strong>Số lượng từ vựng:</strong> 150 từ.</li>
+                    <li><strong>Số lượng chữ Hán:</strong> 150 chữ.</li>
+                    <li><strong>Điểm chuẩn đỗ:</strong> 120 / 200 điểm.</li>
+                </ul>
+            </div>
+
+            <h3>Cấu trúc bài thi mẫu:</h3>
+            <ul>
+                <li><strong>Nghe hiểu (听力 - 20 câu):</strong> Nghe phán đúng/sai, chọn tranh, chọn đáp án đúng.</li>
+                <li><strong>Đọc hiểu (阅读 - 20 câu):</strong> Nhìn chữ nối tranh, chọn từ điền vào chỗ trống, phán đúng/sai.</li>
+            </ul>
+        </div>
+
+        <!-- Nội dung HSK 1 - 3.0 -->
+        <div id="hsk3" class="content-section">
+            <h2>Chương trình HSK 1 - Phiên bản mới 3.0</h2>
+            <p>Phiên bản mới của Cốc Hán (Tiếng Trung Quốc tế) nâng cao tính thực chiến, đòi hỏi người học không chỉ biết từ vựng mà còn phải nhận diện mặt chữ tốt hơn và làm quen với phần viết (nhập liệu hoặc viết tay).</p>
+            
+            <div class="info-box">
+                <strong>Tổng quan cấu trúc (Bậc 1):</strong>
+                <ul>
+                    <li><strong>Số lượng từ vựng:</strong> 500 từ (Mở rộng hơn nhiều so với bản cũ).</li>
+                    <li><strong>Số lượng chữ Hán:</strong> 300 chữ.</li>
+                    <li><strong>Điểm nổi bật:</strong> Tăng cường kỹ năng dịch câu, nhận diện từ ghép và phản xạ giao tiếp thực tế.</li>
+                </ul>
+            </div>
+
+            <h3>Điểm khác biệt chính so với bản 2.0:</h3>
+            <ul>
+                <li>Lượng từ vựng và chữ Hán yêu cầu ở cấp độ sơ cấp đã tăng lên đáng kể để đáp ứng nhu cầu giao tiếp thực tế.</li>
+                <li>Thêm các dạng bài tập cấu trúc câu linh hoạt hơn.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Trang web hỗ trợ giảng dạy tiếng Trung</p>
+    </footer>
+
+    <script>
+        function switchTab(version) {
+            // Ẩn tất cả các phần nội dung
+            document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+            // Bỏ active tất cả các nút
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Hiển thị phần được chọn
+            document.getElementById(version).classList.add('active');
+            // Thêm active cho nút tương ứng
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
